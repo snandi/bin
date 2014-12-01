@@ -4,4 +4,5 @@ echo "Cleaning Folder"
 mkdir tmp backup_linux
 mv *~ backup_linux/.
 mv *.aux *.bbl *.blg *.dvi *.log *.nav *.out *.snm *.toc tmp/.
+mv *concordance.tex *.synctex.gz tmp/.
 echo "Done"
