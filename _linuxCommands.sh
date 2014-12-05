@@ -126,3 +126,11 @@
     end
     #####################################
 
+19. To run R programs from command line:
+    R CMD BATCH RScript.R > RScript.Rout # The .Rout is optional.
+
+    To run it remotely from and continue running it even after logging out of server:
+    nohup R CMD BATCH RScript.R &
+    Then type "exit" to exit the terminal
+
+
