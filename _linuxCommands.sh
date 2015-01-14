@@ -133,4 +133,7 @@
     nohup R CMD BATCH RScript.R &
     Then type "exit" to exit the terminal
 
+20. To print only unique rows from one file into another:
+    sort -u file1 > file2
+
 
