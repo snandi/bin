@@ -136,4 +136,7 @@
 20. To print only unique rows from one file into another:
     sort -u file1 > file2
 
+21. To see full paths of commands in top:
+    top -c -u nandi
+
 
