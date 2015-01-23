@@ -139,4 +139,7 @@
 21. To see full paths of commands in top:
     top -c -u nandi
 
+22. To list only empty subdirectories in a particular directory:
+    find . -type d -empty
+
 
