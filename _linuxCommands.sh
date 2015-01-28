@@ -142,4 +142,9 @@
 22. To list only empty subdirectories in a particular directory:
     find . -type d -empty
 
+23. To dynamically watch a file/folder being populated by some script:
+    watch ls -lht             # watch the folder
+    tail -f filename          # dynamically watch the file being populated
+    less +F filename          # dynamically watch the file being populated
+
 
