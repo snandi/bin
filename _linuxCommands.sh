@@ -90,6 +90,8 @@
 16. To check if a linux computer is 32 bit or 64 bit:
     a) file /sbin/init
     b) uname -a 
+    To check the number of processors:
+    a) cat /proc/cpu
 
 17. To install a .deb package on ubuntu:
     sudo dpkg -i DEB_PACKAGE
