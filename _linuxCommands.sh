@@ -1,11 +1,11 @@
-** To change the prompt on the shell, to display the current directory, do:
+*] To change the prompt on the shell, to display the current directory, do:
    $ PS1='\h:$( pwd )\$ '
    It will only change for the current terminal, as the .bashrc and .bash_profile files are not writable.
 
-** To merge 2 pdf files and create a new one:
+*] To merge 2 pdf files and create a new one:
    pdftk File1.pdf File2.pdf cat output OutputFile.pdf
 
-** To rotate the entire pdf file 90 degrees clockwise:
+*] To rotate the entire pdf file 90 degrees clockwise:
    pdftk Input.pdf cat 1-endE output Output.pdf
    
    To rotate the entire pdf file 180 degrees clockwise:
@@ -24,7 +24,7 @@
    pdftk File1 cat 1-2 output Temp1; pdftk File2 cat 3-4 output Temp2; pdftk Temp1 File2 Temp2 cat output FinalOutput.pdf; rm Temp*
    
 #######################################################################################################
-** GIT commands
+*] GIT commands
    (a) Add a connection to your friend’s version of the github repository, if you haven’t already:
        Go to ~/allez/, then type
        git remote add atbroman git://github.com/atbroman/allez
@@ -50,14 +50,17 @@
 
 #######################################################################################################
 
-** To spell check in a terminal:
+*] To spell check in a terminal:
    aspell -t -c LitReview.tex
 
-** To change R/W permissions for a folder, its subfolders and all their files, do:
+*] To find the number of words in a pdf document:
+   pdftotext filename.pdf - | wc -w
+
+*] To change R/W permissions for a folder, its subfolders and all their files, do:
    chmod 700 -R folder
 
 ############################################ awk commands #############################################
-** To print first column (or any column) of a text file, using awk:
+*] To print first column (or any column) of a text file, using awk:
    awk '{print $1}' filename
 
    To print columns 1 and 4 of a text file with a space between them, using awk:
@@ -72,40 +75,40 @@
 #######################################################################################################
 
 ############################################ sed commands #############################################
-** To delete rows from a file satisfying a particular pattern, for example "NANDI"
+*] To delete rows from a file satisfying a particular pattern, for example "NANDI"
    sed '/NANDI/d' filename.txt
 
 #######################################################################################################
 
-** To grep multiple strings in a file:
+*] To grep multiple strings in a file:
    grep 'String1\|String2\|String3' filename
 
-** To check which users have access to a folder on AFS:
+*] To check which users have access to a folder on AFS:
    fs listacl . or fs listacl /folderpath
 
-** To provide access to a particular folder on AFS:
+*] To provide access to a particular folder on AFS:
    fs setacl -dir /afs/cs.wisc.edu/u/n/a/nandi/Stat/Stat_Quals/ -acl huling rl
 
-** To convert a jpg file to pdf:
+*] To convert a jpg file to pdf:
    convert file.jpg file.pdf
 
-** To sort the folders/files in a directory by their sizes:
+*] To sort the folders/files in a directory by their sizes:
    du -hs * | sort -h
 
-** To sync local and remote folder contents:
+*] To sync local and remote folder contents:
    rsync -av nandi@desk00.stat.wisc.edu:Courses/BMI576_Fall2014/ BMI576_Fall2014  ## To sync contents from Stat folder to LMCG folder
    rsync -av BMI576_Fall2014/ nandi@desk00.stat.wisc.edu:Courses/BMI576_Fall2014  ## To sync contents from LMCG folder to Stat folder
 
-** To count the number of words in a pdf document:
+*] To count the number of words in a pdf document:
    pdftotext document.pdf -enc UTF-8 - | wc -m
 
-** To check if a linux computer is 32 bit or 64 bit:
+*] To check if a linux computer is 32 bit or 64 bit:
    a) file /sbin/init
    b) uname -a 
    To check the number of processors:
    a) cat /proc/cpu
 
-** To install a .deb package on ubuntu:
+*] To install a .deb package on ubuntu:
    sudo dpkg -i DEB_PACKAGE
    For example if the package file is called askubuntu_2.0.deb then you should do 
    sudo dpkg -i askubuntu_2.0.deb. 
@@ -116,7 +119,7 @@
    REMOVE A PACKAGE
    sudo dpkg -r PACKAGE_NAME
 
-** Synergy configuration file
+*] Synergy configuration file
    #####################################
    section: screens
    boltzmann:
@@ -140,23 +143,23 @@
    end
    #####################################
 
-** To run R programs from command line:
+*] To run R programs from command line:
    R CMD BATCH RScript.R > RScript.Rout # The .Rout is optional.
 
    To run it remotely from and continue running it even after logging out of server:
    nohup R CMD BATCH RScript.R &
    Then type "exit" to exit the terminal
 
-** To print only unique rows from one file into another:
+*] To print only unique rows from one file into another:
    sort -u file1 > file2
 
-** To see full paths of commands in top:
+*] To see full paths of commands in top:
    top -c -u nandi
 
-** To list only empty subdirectories in a particular directory:
+*] To list only empty subdirectories in a particular directory:
    find . -type d -empty
 
-** To dynamically watch a file/folder being populated by some script:
+*] To dynamically watch a file/folder being populated by some script:
    watch ls -lht             # watch the folder
    tail -f filename          # dynamically watch the file being populated
    less +F filename          # dynamically watch the file being populated
