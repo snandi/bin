@@ -143,6 +143,7 @@
    end
    #####################################
 
+#######################################################################################################
 *] To run R programs from command line:
    R CMD BATCH RScript.R > RScript.Rout # The .Rout is optional.
 
@@ -150,6 +151,26 @@
    nohup R CMD BATCH RScript.R &
    Then type "exit" to exit the terminal
 
+*] Install R packages from .tar.gz file after adding NAMESPACE
+   According to the R documentation for writing extensions, all packages destined for version 3.0.0 and 
+   later must contain a NAMESPACE file. If you download an R package that gives you the above error, 
+   here is what you should try: 
+
+   1. Untar the package:
+   tar -xvf the_package.tar.gz
+
+   2. Add a NAMESPACE file with the line exportPattern( "." ):
+   cd the_package
+   echo 'exportPattern( "." )' > NAMESPACE
+   cd ..
+   
+   3. Re-tar the package:
+   tar -zcf the_package.tar.gz the_package
+   
+   4. Try and install it again.
+   R CMD INSTALL the_package.tar.gz
+
+#######################################################################################################
 *] To print only unique rows from one file into another:
    sort -u file1 > file2
 
