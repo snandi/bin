@@ -48,6 +48,16 @@
    To clone an existing repository on github:
    git clone git@github.com:snandi/RScripts_Header RScripts
 
+   To Collaborate
+   --------------
+   (a) git log: Display the entire commit history using the default formatting. If the output takes 
+   up more than one screen, you can use Space to scroll and q to exit.
+   (b) git log --oneline: Condense each commit to a single line. This is useful for getting a high-level 
+   overview of the project history.
+   (c) git log <file>: Only display commits that include the specified file. This is an easy way to 
+   see the history of a particular file.
+   (d) 
+
 #######################################################################################################
 
 *] To spell check in a terminal:
