@@ -93,6 +93,9 @@
 *] To grep multiple strings in a file:
    grep 'String1\|String2\|String3' filename
 
+   To grep, case insensitive:
+   grep -i 'String' filename
+
 *] To check which users have access to a folder on AFS:
    fs listacl . or fs listacl /folderpath
 
