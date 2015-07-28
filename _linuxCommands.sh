@@ -160,6 +160,13 @@
 *] To run R programs from command line:
    R CMD BATCH RScript.R > RScript.Rout # The .Rout is optional.
 
+   To run R programs from command line, with arguments:
+   R CMD BATCH '--args a=1 b=c(2,5,6)' RScript.R RScript.out &
+   # For an example, see ~/Project_CurveReg/RScripts_CurveReg/RScript09-01_Mflorum_Registration.R
+   Need to include the following code chunk:
+   Args <- (commandArgs(TRUE))
+   for(i in 1:length(Args)) eval(parse(text = Args[[i]]))
+
    To run it remotely from and continue running it even after logging out of server:
    nohup R CMD BATCH RScript.R &
    Then type "exit" to exit the terminal
