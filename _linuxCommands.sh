@@ -62,6 +62,8 @@
 
 *] To spell check in a terminal:
    aspell -t -c LitReview.tex
+   OR
+   hunspell -t File.tex
 
 *] To find the number of words in a pdf document:
    pdftotext filename.pdf - | wc -w
