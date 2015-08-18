@@ -48,6 +48,17 @@
    To clone an existing repository on github:
    git clone git@github.com:snandi/RScripts_Header RScripts
 
+   To set up git on a new Project
+   (1) cd Project_QualityScore
+   (2) git init
+   (3) cp .gitignore from somewhere
+   (4) Set up a git repository on github (preferably by the same name)
+   (5) git remote add origin git@github.com:snandi/Project_QualityScore.git
+   (6) git add stuff
+   (7) git commit -m "First commit"
+   (8) git pull --rebase origin master
+   (9) git push origin master
+
    To Collaborate
    --------------
    (a) git log: Display the entire commit history using the default formatting. If the output takes 
