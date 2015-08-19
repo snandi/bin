@@ -203,6 +203,11 @@
    4. Try and install it again.
    R CMD INSTALL the_package.tar.gz
 
+*] To install R packages from github if devtools cannot be installed:
+  1. git clone git://github.com/kbroman/broman
+  2. R CMD build broman
+  3. R CMD INSTALL broman_0.59-5.tar.gz
+
 #######################################################################################################
 *] To print only unique rows from one file into another:
    sort -u file1 > file2
