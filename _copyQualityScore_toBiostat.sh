@@ -11,4 +11,7 @@ FolderData=/exports/aspen/cwu/Project_QualityScore/Data/MF/refFrag_$Frag
 scp -r $FolderData snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/MF_cap348/Project_QualityScore/.
 scp -r $FolderPlot snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/MF_cap348/Project_QualityScore/.
 
+## Usage:
+## ./_copyQualityScore_toBiostat.sh 12 #for copying data of refFrag12
+
 
