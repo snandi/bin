@@ -223,17 +223,29 @@
    tail -f filename          # dynamically watch the file being populated
    less +F filename          # dynamically watch the file being populated
 
+*] To download multiple pdf files from a website:
+   Ex. http://pages.stat.wisc.edu/~wahba/stat840/pdf1/
+   wget -r -l1 -A.pdf "http://pages.stat.wisc.edu/~wahba/stat840/pdf1/"
+   -r is for recursive download
+   -l1 is for level 1. If there are subfolders with pdf files in it, this wont work
+
 ########################################
 *] To ssh/rcp/rsync without password prompting:
 
-   Lets say you want to copy between two hosts host_A and host_B. host_A is the host where you would run the scp, ssh or rsyn command, irrespective of the direction of the file copy! On host_A, run this command as the user that runs scp/ssh/rsync
+   Lets say you want to copy between two hosts host_A and host_B. host_A is the host where you would run 
+   the scp, ssh or rsyn command, irrespective of the direction of the file copy! On host_A, run this 
+   command as the user that runs scp/ssh/rsync
 
    ssh-keygen -t rsa
 
-   This will prompt for a passphrase. Just press the enter key. It will then generate an identification (private key) and a public key. Do not ever share the private key with anyone! ssh-keygen shows where it saved the public key. This is by default ~/.ssh/id_rsa.pub: Your public key has been saved in <your_home_dir>/.ssh/id_rsa.pub
+   This will prompt for a passphrase. Just press the enter key. It will then generate an identification 
+   (private key) and a public key. Do not ever share the private key with anyone! ssh-keygen shows 
+   where it saved the public key. This is by default ~/.ssh/id_rsa.pub: Your public key has been saved 
+   in <your_home_dir>/.ssh/id_rsa.pub
    
    Transfer the id_rsa.pub file to host_B by either ftp, scp, rsync or any other method. 
-   On host_B, login as the remote user which you plan to use when you run scp, ssh or rsync on host_src. Copy the contents of id_rsa.pub from host_A to ~/.ssh/authorized_keys on host_B 
+   On host_B, login as the remote user which you plan to use when you run scp, ssh or rsync on host_src. 
+   Copy the contents of id_rsa.pub from host_A to ~/.ssh/authorized_keys on host_B 
    chmod 700 ~/.ssh/authorized_keys
 
    All set!
