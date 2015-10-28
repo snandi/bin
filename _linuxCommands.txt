@@ -101,6 +101,12 @@
 *] To delete rows from a file satisfying a particular pattern, for example "NANDI"
    sed '/NANDI/d' filename.txt
 
+*] If you want to delete lines 5 through 10 and 12:
+   sed -e '5,10d;12d' file
+   This will print the results to the screen. If you want to save the results to the same file:
+   
+   sed -i.bak -e '5,10d;12d' file
+   This will back the file up to file.bak, and delete the given lines.
 #######################################################################################################
 
 *] To grep multiple strings in a file:
