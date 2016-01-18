@@ -257,3 +257,5 @@
    All set!
 
 ########################################
+*] To open an application from command line and redirect the error messages to dev null:
+   firefox 2>/dev/null &
