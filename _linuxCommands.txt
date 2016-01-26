@@ -107,6 +107,9 @@
    
    sed -i.bak -e '5,10d;12d' file
    This will back the file up to file.bak, and delete the given lines.
+
+*] To concatenate a bunch of files into one file and removing all the blank lines:
+   sed -e '$s/$/\n/' -s chr13_frag*GC_Signal.txt > chr13_GC_Signal.txt; sed -i '/^$/d' chr13_GC_Signal.txt
 #######################################################################################################
 
 *] To grep multiple strings in a file:
