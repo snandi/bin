@@ -13,8 +13,8 @@ if [[ ( $# == "--help") ||  $# == "-h" ]]
 File=$1
 Filetex=$File.tex
 #echo $File $Filetex
-latex $File
+pdflatex $File
 bibtex $File
-latex $File
+pdflatex $File
 pdflatex $Filetex
 pdflatex $Filetex
