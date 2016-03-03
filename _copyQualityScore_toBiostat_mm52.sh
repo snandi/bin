@@ -12,8 +12,8 @@ Chr="Chr$ChrNum"
 FolderPlot=/aspen/nandi/mm52-all7341/Project_QualityScore/Data/human/$Chr/refFrag_$Frag
 FolderData=/aspen/nandi/mm52-all7341/Project_QualityScore/Plots/human/$Chr/refFrag_$Frag
 
-scp -r $FolderData snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/mm52-all7341/Project_QualityScore/$chr.
-scp -r $FolderPlot snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/mm52-all7341/Project_QualityScore/$chr.
+scp -r $FolderData snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/mm52-all7341/Project_QualityScore/$chr
+scp -r $FolderPlot snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/mm52-all7341/Project_QualityScore/$chr
 
 ## Usage:
 ## This should be run on lmcg computers
