@@ -67,7 +67,11 @@
    overview of the project history.
    (c) git log <file>: Only display commits that include the specified file. This is an easy way to 
    see the history of a particular file.
-   (d) 
+   (d) To fix a broken version of a file, do:
+       1. git log file.R
+       2. git diff <revision_1>:file.R <revision_2>:file.R (The revision_1 and _2 are first 6 or 7 
+       	  characters of the commit ids)
+   (e) 
 
 #######################################################################################################
 
