@@ -17,6 +17,6 @@ scp -r $FolderPlot snandi@adhara.biostat.wisc.edu:/z/Proj/newtongroup/snandi/mm5
 
 ## Usage:
 ## This should be run on lmcg computers
-## ./_copyQualityScore_toBiostat.sh 13 7491 #for copying data of chr 13, refFrag 7491
+## ./_copyQualityScore_toBiostat_mm52.sh 13 7491 #for copying data of chr 13, refFrag 7491
 
 
