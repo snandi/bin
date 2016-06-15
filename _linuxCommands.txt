@@ -179,6 +179,15 @@
 ########################################
 
 #######################################################################################################
+*] To install R on ubuntu 14.04:
+   Add and entry deb https://<my.favorite.cran.mirror>/bin/linux/ubuntu trusty/ in your /etc/apt/sources.list file
+   (example http://cran.stat.ucla.edu/bin/linux/ubuntu trusty/)
+   Then do sudo apt-get update
+   Then do sudo apt-get install r-base 
+
+   If you get a GPG error: http://cran.stat.ucla.edu trusty/ Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 51716619E084DAB9, then do the following:
+   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
+
 *] To run R programs from command line:
    R CMD BATCH RScript.R > RScript.Rout # The .Rout is optional.
 
