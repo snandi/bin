@@ -26,7 +26,7 @@ use lib '/omm/bin/lib';
 require SOMA;
 ($SOMA::VERSION eq $VERSION) || die("$0: Could not find SOMA v$VERSION\n");
 
-my $minFragSize = 0;
+my $minFragSize = 6;
 my $xmlFileList;
 
 GetOptions (
