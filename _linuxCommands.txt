@@ -233,6 +233,14 @@
 *] To install RCurl and XML packages in R, you should install the following on ubuntu:
    sudo apt-get install libcurl4-openssl-dev libxml2-dev
 
+*] TO BUILD R PACKAGES ON RSTUDIO (ESSENTIAL STEPS)
+   1. Filenames and function names should be the same
+   2. Add the line #'@export before the function definition, to export that function
+   3. Add a documentation file with detailed descriptions, and argument requirements
+   4. Click "Build & Reload" in Build.
+   5. To build .tar.gz click on "Build source package" in Build.
+   6. To check package comprehensibly and build the manual, click on "Check package" in Build.
+
 #######################################################################################################
 *] To print only unique rows from one file into another:
    sort -u file1 > file2
