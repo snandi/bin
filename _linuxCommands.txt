@@ -86,7 +86,9 @@
 *] To change R/W permissions for a folder, its subfolders and all their files, do:
    chmod 700 -R folder
 
-############################################ awk commands #############################################
+#######################################################################################################
+## awk commands 
+#######################################################################################################
 *] To print first column (or any column) of a text file, using awk:
    awk '{print $1}' filename
 
@@ -99,9 +101,12 @@
    To search for a pattern in column 1 and print some of the columns for those successful searches
    awk '$1 == "pattern" {print $1 " " $4}' filename
 
-#######################################################################################################
+   To count the number of columns in each row of a text file
+   cat filename | awk '{print NF}'
 
-############################################ sed commands #############################################
+#######################################################################################################
+## sed commands 
+#######################################################################################################
 *] To delete rows from a file satisfying a particular pattern, for example "NANDI"
    sed '/NANDI/d' filename.txt
 
