@@ -10,7 +10,7 @@ pdfFiles=$1
 Continue="YES"
 for File in $(cat $pdfFiles) 
 do 
-    evince $File &
+    evince $File 2>/dev/null &
     echo "Continue? Y/N"
     read Continue
     if [ "$Continue" == "N" ]; then
