@@ -245,6 +245,8 @@
    4. Click "Build & Reload" in Build.
    5. To build .tar.gz click on "Build source package" in Build.
    6. To check package comprehensibly and build the manual, click on "Check package" in Build.
+   7. If the package manual is not created automatically, do it from command prompt
+      R CMD Rd2pdf packageName
 
 #######################################################################################################
 *] To print only unique rows from one file into another:
