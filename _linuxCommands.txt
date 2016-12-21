@@ -270,6 +270,12 @@
    -r is for recursive download
    -l1 is for level 1. If there are subfolders with pdf files in it, this wont work
 
+*] To get the number of cores: 
+   cat /proc/cpuinfo
+   
+   To get memory size:
+   cat /proc/meminfo
+
 ########################################
 *] To ssh/rcp/rsync without password prompting:
 
