@@ -14,7 +14,7 @@ do
     echo "Continue? Y/N"
     read Continue
     if [ "$Continue" == "N" ]; then
-	rm -f pdfFiles
+	##rm -f pdfFiles
 	exit 1
     fi
 done
