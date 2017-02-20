@@ -276,6 +276,9 @@
    To get memory size:
    cat /proc/meminfo
 
+*] To delete a large number of files in a folder:
+   find . -type f -delete
+
 ########################################
 *] To ssh/rcp/rsync without password prompting:
 
