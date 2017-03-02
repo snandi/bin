@@ -230,6 +230,9 @@
    4. Try and install it again.
    R CMD INSTALL the_package.tar.gz
 
+   5. To check which version of Package loaded in R, do
+   packageVersion("R-package")
+
 *] To install R packages from github if devtools cannot be installed:
    1. git clone git://github.com/kbroman/broman
    2. R CMD build broman
