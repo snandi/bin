@@ -1,9 +1,11 @@
 #!/bin/bash
 
 ## This script collects page 8 from all pdf files and creates a new pdf file
+## Usage: _collectPage8.sh pdfFiles outputFile 8 
 
 pdfFiles=$1
 outputFile=$2
+pageNum=$3
 
 #for File in $(cat $pdfFiles) 
 #for file in *.pdf ; 
@@ -21,12 +23,12 @@ LineNum=1
 while read line;
 do
       if [ "$LineNum" -gt "1" ]; then
-            pdftk "$line" cat 8 output Temp1.pdf ; 
+            pdftk "$line" cat $pageNum output Temp1.pdf ; 
             pdftk Temp1.pdf Temp.pdf cat output output.pdf
             rm -f Temp1.pdf Temp.pdf
             mv output.pdf Temp.pdf
       else
-            pdftk "$line" cat 8 output Temp.pdf ; 
+            pdftk "$line" cat $pageNum output Temp.pdf ; 
       fi
       LineNum=$(( $LineNum + 1 ))
 
