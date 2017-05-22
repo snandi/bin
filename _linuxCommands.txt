@@ -104,6 +104,17 @@
    To count the number of columns in each row of a text file
    cat filename | awk '{print NF}'
 
+   To delete columns 1 and 2 of a text file
+   awk '{$1=""; $2=""; sub("  ", " "); print}' input_filename > output_filename
+   Explanation:
+   awk: invoke the awk command
+   $1=""; $2="";: set field 1 and 2 to the empty string
+   sub(...);: clean up the output fields because fields 1 & 2 will still be delimited by " "
+   print: print the modified line
+   input_filename > output_filename: same as above.
+
+   
+
 #######################################################################################################
 ## sed commands 
 #######################################################################################################
