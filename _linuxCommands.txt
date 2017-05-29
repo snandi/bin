@@ -130,6 +130,11 @@
 
 *] To concatenate a bunch of files into one file and removing all the blank lines:
    sed -e '$s/$/\n/' -s chr13_frag*GC_Signal.txt > chr13_GC_Signal.txt; sed -i '/^$/d' chr13_GC_Signal.txt
+
+*] To search and replace a string in multiple files
+   sed -i.bak 's/FluoroscanningPlots/FscanPlots/g' *.R ## Replaced FluoroscanningPlots with FscanPlots in all
+						       ## R scripts
+
 #######################################################################################################
 
 *] To grep multiple strings in a file:
