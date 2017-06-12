@@ -3,7 +3,7 @@
 echo "Cleaning Folder"
 mkdir tmp backup_linux
 mv *~ backup_linux/.
-mv *.aux *.bbl *.blg *.dvi *.log *.nav *.out *.snm *.toc *.lof *.lot tmp/.
+mv *.aux *.bbl *.blg *.dvi *.log *.nav *.out *.snm *.toc *.lof *.lot *.fls *.fdb* tmp/.
 mv *concordance.tex *.synctex.gz tmp/.
 mv *.Rout tmp/.
 echo "Done"
